@@ -123,32 +123,32 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Cidades.cs">
-      <DependentUpon>EntidadesCadeMeuMedicoBD.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EntidadesCadeMeuMedicoBD.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntidadesCadeMeuMedicoBD.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EntidadesCadeMeuMedicoBD.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntidadesCadeMeuMedicoBD.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\EntidadesCadeMeuMedicoBD.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>EntidadesCadeMeuMedicoBD.edmx</DependentUpon>
+      <DependentUpon>ModeloDeDados.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Especialidades.cs">
-      <DependentUpon>EntidadesCadeMeuMedicoBD.tt</DependentUpon>
+      <DependentUpon>ModeloDeDados.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MedicoMetadado.cs" />
     <Compile Include="Models\Medicos.cs">
-      <DependentUpon>EntidadesCadeMeuMedicoBD.tt</DependentUpon>
+      <DependentUpon>ModeloDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModeloDeDados.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloDeDados.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModeloDeDados.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ModeloDeDados.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModeloDeDados.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\Usuarios.cs">
-      <DependentUpon>EntidadesCadeMeuMedicoBD.tt</DependentUpon>
+      <DependentUpon>ModeloDeDados.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -169,27 +169,29 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <EntityDeploy Include="Models\EntidadesCadeMeuMedicoBD.edmx">
+    <EntityDeploy Include="Models\ModeloDeDados.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>EntidadesCadeMeuMedicoBD.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModeloDeDados.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <Content Include="Models\EntidadesCadeMeuMedicoBD.Context.tt">
+    <Content Include="Models\ModeloDeDados.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntidadesCadeMeuMedicoBD.edmx</DependentUpon>
-      <LastGenOutput>EntidadesCadeMeuMedicoBD.Context.cs</LastGenOutput>
+      <DependentUpon>ModeloDeDados.edmx</DependentUpon>
+      <LastGenOutput>ModeloDeDados.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="Models\EntidadesCadeMeuMedicoBD.edmx.diagram">
-      <DependentUpon>EntidadesCadeMeuMedicoBD.edmx</DependentUpon>
+    <Content Include="Models\ModeloDeDados.edmx.diagram">
+      <DependentUpon>ModeloDeDados.edmx</DependentUpon>
     </Content>
-    <Content Include="Models\EntidadesCadeMeuMedicoBD.tt">
+    <Content Include="Models\ModeloDeDados.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>EntidadesCadeMeuMedicoBD.edmx</DependentUpon>
-      <LastGenOutput>EntidadesCadeMeuMedicoBD.cs</LastGenOutput>
+      <DependentUpon>ModeloDeDados.edmx</DependentUpon>
+      <LastGenOutput>ModeloDeDados.cs</LastGenOutput>
     </Content>
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
@@ -199,6 +201,8 @@
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="Views\TesteLayout\Index.cshtml" />
+    <Content Include="Views\Medicos\Index.cshtml" />
+    <Content Include="Views\Medicos\Adicionar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
