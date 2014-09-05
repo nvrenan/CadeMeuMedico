@@ -8,7 +8,8 @@ namespace CadeMeuMedico.Controllers
     {
         //
         // GET: /Medicos/
-        private EntidadesCadeMeuMedicoBD db = new EntidadesCadeMeuMedicoBD();
+        private EntidadesCadeMeuMedicoBD db = new EntidadesCadeMeuMedicoBD();
+
         public ActionResult Index()
         {
             var medicos = db.Medicos.Include("Cidades").Include("Especialidades").ToList();
@@ -22,6 +23,26 @@ namespace CadeMeuMedico.Controllers
                 "IDEspecialidade",
                 "Nome");
             return View();
+        }
+
+        [HttpPost]
+        public ActionResult Adicionar(Medicos medico)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Medicos.Add(medico);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            ViewBag.IDCidade = new SelectList(db.Cidades, "IDCidade",
+                "Nome",
+                medico.IDCidade);
+            ViewBag.IDEspecialidade = new SelectList(db.Especialidades,
+                "IDEspecialidade",
+                "Nome",
+                medico.IDEspecialidade);
+            return View(medico);
+
         }
 
     }
