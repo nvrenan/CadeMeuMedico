@@ -1,4 +1,4 @@
-﻿@model CadeMeuMedico.Models.Medico
+﻿@model CadeMeuMedico.Models.Medicos
 
 @{
     ViewBag.Title = "Adicionar";
@@ -87,6 +87,7 @@
             @Html.DropDownList("IDEspecialidade", String.Empty).
             @Html.ValidationMessageFor(model => model.IDEspecialidade)
         </div>
+        <br/>
         <p>
             <input type="submit" value="Create" />
         </p>
