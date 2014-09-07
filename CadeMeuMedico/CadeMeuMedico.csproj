@@ -116,22 +116,22 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\MedicosController.cs" />
+    <Compile Include="Controllers\MedicoController.cs" />
     <Compile Include="Controllers\MensagensController.cs" />
     <Compile Include="Controllers\TesteLayoutController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Cidades.cs">
+    <Compile Include="Models\Cidade.cs">
       <DependentUpon>ModeloDeDados.tt</DependentUpon>
     </Compile>
-    <Compile Include="Models\Especialidades.cs">
+    <Compile Include="Models\Especialidade.cs">
+      <DependentUpon>ModeloDeDados.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Medico.cs">
       <DependentUpon>ModeloDeDados.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MedicoMetadado.cs" />
-    <Compile Include="Models\Medicos.cs">
-      <DependentUpon>ModeloDeDados.tt</DependentUpon>
-    </Compile>
     <Compile Include="Models\ModeloDeDados.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -147,7 +147,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>ModeloDeDados.edmx</DependentUpon>
     </Compile>
-    <Compile Include="Models\Usuarios.cs">
+    <Compile Include="Models\Usuario.cs">
       <DependentUpon>ModeloDeDados.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -201,8 +201,9 @@
     <Content Include="Views\Web.config" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="Views\TesteLayout\Index.cshtml" />
-    <Content Include="Views\Medicos\Index.cshtml" />
-    <Content Include="Views\Medicos\Adicionar.cshtml" />
+    <Content Include="Views\Medico\Index.cshtml" />
+    <Content Include="Views\Medico\Adicionar.cshtml" />
+    <Content Include="Views\Medico\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
