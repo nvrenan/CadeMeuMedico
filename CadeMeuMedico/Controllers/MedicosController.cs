@@ -45,5 +45,11 @@ namespace CadeMeuMedico.Controllers
 
         }
 
+        public ActionResult Edit(long id)
+        {
+            Medicos medico = db.Medicos.Find(id);
+
+        }
+
     }
 }
