@@ -1,4 +1,5 @@
-﻿@model IEnumerable<CadeMeuMedico.Models.Medico>
+﻿@using CadeMeuMedico.Models
+@model IEnumerable<CadeMeuMedico.Models.Medico>
 
 @{
     ViewBag.Title = "Index";
@@ -23,7 +24,7 @@
         <th></th>
     </tr>
 
-    @foreach (var item in Model)
+    @foreach (Medico item in Model)
     {
         <tr>
             <td>
@@ -36,8 +37,8 @@
                 @Html.DisplayFor(modelItem => item.IDEspecialidade)
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit",
-                    new {/* id=item.PrimaryKey */}) |
+                @Html.ActionLink("Editar", "Editar",
+                            new {id = item.IDMedico})
                 @Html.ActionLink("Details", "Details",
                     new {/* id=item.PrimaryKey */}) |
                 @Html.ActionLink("Delete", "Delete",

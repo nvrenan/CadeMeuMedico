@@ -46,7 +46,7 @@ namespace CadeMeuMedico.Controllers
             return View(medico);
         }
 
-        public ActionResult Edit(long id)
+        public ActionResult Editar(long id)
         {
             Medico medico = db.Medicos.Find(id);
             ViewBag.IDCidade = new SelectList(db.Cidades, "IDCidade",
@@ -60,15 +60,14 @@ namespace CadeMeuMedico.Controllers
         }
 
         [HttpPost]
-        public ActionResult Adicionar(Medico medico)
+        public ActionResult Editar(Medico medico)
         {
             if (ModelState.IsValid)
             {
                 db.Entry(medico).State = EntityState.Modified;
 
                 db.SaveChanges();
-                return RedirectToAction("Index")
-                ;
+                return RedirectToAction("Index");
             }
             ViewBag.IDCidade = new SelectList(db.Cidades, "IDCidade",
                 "Nome",
@@ -80,3 +79,4 @@ namespace CadeMeuMedico.Controllers
             return View(medico);
         }
     }
+}

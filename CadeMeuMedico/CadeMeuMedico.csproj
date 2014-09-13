@@ -203,7 +203,7 @@
     <Content Include="Views\TesteLayout\Index.cshtml" />
     <Content Include="Views\Medico\Index.cshtml" />
     <Content Include="Views\Medico\Adicionar.cshtml" />
-    <Content Include="Views\Medico\Edit.cshtml" />
+    <Content Include="Views\Medico\Editar.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

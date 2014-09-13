@@ -1,7 +1,7 @@
 ﻿@model CadeMeuMedico.Models.Medico
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Editar";
 }
 
 <h2>Edit</h2>
@@ -13,13 +13,7 @@
     <fieldset>
         <legend>Medico</legend>
 
-        <div class="editor-label">
-            @Html.LabelFor(model => model.IDMedico)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.IDMedico)
-            @Html.ValidationMessageFor(model => model.IDMedico)
-        </div>
+        @Html.HiddenFor(model => model.IDMedico)
 
         <div class="editor-label">
             @Html.LabelFor(model => model.CRM)
@@ -89,17 +83,17 @@
             @Html.LabelFor(model => model.IDCidade)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.IDCidade)
+            @Html.DropDownList("IDCidade", String.Empty)
             @Html.ValidationMessageFor(model => model.IDCidade)
         </div>
-
         <div class="editor-label">
             @Html.LabelFor(model => model.IDEspecialidade)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.IDEspecialidade)
+            @Html.DropDownList("IDEspecialidade", String.Empty).
             @Html.ValidationMessageFor(model => model.IDEspecialidade)
         </div>
+
 
         <p>
             <input type="submit" value="Save" />
