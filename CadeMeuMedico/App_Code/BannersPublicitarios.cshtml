@@ -1,0 +1,18 @@
+﻿@using CadeMeuMedico.Models
+@helper RetornaDoisBannersMaisRecentes()
+{
+    var bd = new EntidadesCadeMeuMedicoBD();
+    var banners = bd.BannersPublicitarios.
+        OrderByDescending(b => b.IDBanner).Take(2);
+    <div style="border: 1px solid #efefef; display: inline-block; padding: 10px; text-align: left; width: 100%;">
+        @foreach (var b in banners)
+        {
+            <div style="float: left; height: 125px; margin-right: 10px; width: 125px;">
+                <a href="@b.LinkBanner">
+                    <img src="~/Uploads/Banners/@b.BannerCampanha"
+                         title="@b.TituloCampanha" />
+                </a>
+            </div>
+        }
+    </div>
+}

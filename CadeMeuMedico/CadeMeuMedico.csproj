@@ -186,6 +186,7 @@
       <DependentUpon>ModeloDeDados.edmx</DependentUpon>
       <LastGenOutput>ModeloDeDados.cs</LastGenOutput>
     </Content>
+    <Content Include="App_Code\BannersPublicitarios.cshtml" />
     <None Include="Scripts\jquery-2.1.1.intellisense.js" />
     <Content Include="Scripts\jquery-2.1.1.js" />
     <Content Include="Scripts\jquery-2.1.1.min.js" />
