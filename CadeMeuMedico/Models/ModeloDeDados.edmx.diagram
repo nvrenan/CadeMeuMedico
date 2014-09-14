@@ -4,11 +4,12 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="4f169404b76b4a30a4bc993e6cca5f77" Name="Diagram1">
+      <Diagram DiagramId="3c0d7573652b44578a0797996df75f2b" Name="Diagram1">
+        <EntityTypeShape EntityType="CadeMeuMedicoBDModel.BannersPublicitarios" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CadeMeuMedicoBDModel.Cidade" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
         <EntityTypeShape EntityType="CadeMeuMedicoBDModel.Especialidade" Width="1.5" PointX="0.75" PointY="6" IsExpanded="true" />
         <EntityTypeShape EntityType="CadeMeuMedicoBDModel.Medico" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
-        <EntityTypeShape EntityType="CadeMeuMedicoBDModel.Usuario" Width="1.5" PointX="5.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CadeMeuMedicoBDModel.Usuario" Width="1.5" PointX="2.75" PointY="5.75" IsExpanded="true" />
         <AssociationConnector Association="CadeMeuMedicoBDModel.fk_medico_Cidade" ManuallyRouted="false" />
         <AssociationConnector Association="CadeMeuMedicoBDModel.fk_medico_especialidade" ManuallyRouted="false" />
       </Diagram>

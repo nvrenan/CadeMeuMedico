@@ -25,6 +25,7 @@ namespace CadeMeuMedico.Models
             throw new UnintentionalCodeFirstException();
         }
     
+        public virtual DbSet<BannersPublicitarios> BannersPublicitarios { get; set; }
         public virtual DbSet<Cidade> Cidades { get; set; }
         public virtual DbSet<Especialidade> Especialidades { get; set; }
         public virtual DbSet<Medico> Medicos { get; set; }
