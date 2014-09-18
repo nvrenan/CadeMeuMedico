@@ -10,6 +10,11 @@ namespace CadeMeuMedico.Controllers
     {
         //
         // GET: /Home/
+        public ActionResult Login()
+        {
+            ViewBag.Title = "Seja bem vindo(a)";
+            return View();
+        }
 
         public ActionResult Index()
         {
