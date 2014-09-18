@@ -162,6 +162,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Content Include="Scripts\Login.Home.js" />
     <Content Include="Uploads\Banners\banner-cdc-cademeumedico.png" />
     <Content Include="Uploads\Banners\logo-conio-cademeumedico.png" />
     <Content Include="Content\bootstrap-theme.css" />

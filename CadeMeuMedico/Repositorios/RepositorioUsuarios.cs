@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using System.Web.Caching;
 using System.Web.Security;
 using CadeMeuMedico.Models;
 
@@ -14,13 +15,13 @@ namespace CadeMeuMedico.Repositorios
             {
                 using (var db = new EntidadesCadeMeuMedicoBD())
                 {
-                    var QueryAutenticaUsuarios = db.Usuarios.Where(x => x.Login == Login && x.Senha == Senha).
+                    var QueryAutenticaUsuarios = db.Usuarios.Where(x => x.Login == Login && x.Senha == SenhaCriptografada).
                                                              SingleOrDefault();
                     if (QueryAutenticaUsuarios == null)
                     {
                         return false;
                     }
-                    //RepositorioCookies.RegistraCookieAutenticacao(QueryAutenticaUsuarios.IDUsuario);
+                    //RegistraCookieAutenticacao(QueryAutenticaUsuarios.IDUsuario);
                     return true;
                 }
             }
